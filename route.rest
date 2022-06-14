@@ -1,0 +1,97 @@
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+    "fullname" : "Le Bon",
+    "email" : "lebon@gmail.com",
+    "password" : "789456"
+}
+###
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+    "fullname" : "koribeche amir",
+    "email" : "amir@gmail.com",
+    "password" : "123456"
+}
+
+###
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+    "fullname" : "Le bien",
+    "email" : "lebien@gmail.com",
+    "password" : "741963"
+}
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email" : "amir@gmail.com",
+    "password" : "123456"
+}
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email" : "amier@gmail.com",
+    "password" : "123456"
+}
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email" : "lebon@gmail.com",
+    "password" : "789456"
+}
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email" : "lebien@gmail.com",
+    "password" : "741963"
+}
+
+###
+GET http://localhost:5000/api/annonce
+Content-Type: application/json
+
+{
+    "nom": "casquette",
+    "prix": 200,
+    "description": "La description",
+    "photo": "la photo",
+    "qteDispo": 2
+}
+
+###
+POST http://localhost:5000/api/annonce
+Content-Type: application/json
+
+{
+    "nom": "veste",
+    "prix": 150,
+    "description": "La veste autonne",
+    "photo": "la photo",
+    "qteDispo": 3
+}
+###
+PUT http://localhost:5000/api/annonce
+Content-Type: application/json
+
+{
+    "nom": "veste",
+    "prix": 155,
+    "description": "La veste autonne neuve",
+    "photo": "la photo",
+    "qteDispo": 3
+}

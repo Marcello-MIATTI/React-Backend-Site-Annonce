@@ -39,8 +39,8 @@ POST http://localhost:5000/api/user/login
 Content-Type: application/json
 
 {
-    "email" : "amier@gmail.com",
-    "password" : "123456"
+    "email" : "lebien@gmail.com",
+    "password" : "741963"
 }
 
 ###
@@ -61,7 +61,7 @@ Content-Type: application/json
     "password" : "741963"
 }
 
-###
+###-------------Inserer une nouvelle annonce "casquette"
 GET http://localhost:5000/api/annonce
 Content-Type: application/json
 
@@ -73,10 +73,11 @@ Content-Type: application/json
     "qteDispo": 2
 }
 
-###
+###-------------Inserer une nouvelle annonce "veste"-----------//
+// On ajoute une authorisation ( bearer + token de connexion utilisateur )  
 POST http://localhost:5000/api/annonce
 Content-Type: application/json
-
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYThlNDBjNDFjOGEyNDBiOWM0Njg4YyIsImlhdCI6MTY1NTIzNTgyNX0.HzDrAd9kmIx-Z4yJ8fR4FLtjyxBbnPZVk5JxWIKNqW4
 {
     "nom": "veste",
     "prix": 150,
@@ -84,10 +85,24 @@ Content-Type: application/json
     "photo": "la photo",
     "qteDispo": 3
 }
-###
+###------------Mettre à jour une annonce-----------------------// 
+// On ajoute une authorisation ( bearer + token de connexion utilisateur ) 
 PUT http://localhost:5000/api/annonce
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYThlNDBjNDFjOGEyNDBiOWM0Njg4YyIsImlhdCI6MTY1NTIzNTgyNX0.HzDrAd9kmIx-Z4yJ8fR4FLtjyxBbnPZVk5JxWIKNqW4
+{
+    "nom": "veste",
+    "prix": 155,
+    "description": "La veste autonne neuve",
+    "photo": "la photo",
+    "qteDispo": 3
+}
 
+###-----------Supprimer une annonce-----------------------// 
+// On ajoute une authorisation ( bearer + token de connexion utilisateur ) 
+DELETE  http://localhost:5000/api/annonce
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYThlNDBjNDFjOGEyNDBiOWM0Njg4YyIsImlhdCI6MTY1NTIzNTgyNX0.HzDrAd9kmIx-Z4yJ8fR4FLtjyxBbnPZVk5JxWIKNqW4
 {
     "nom": "veste",
     "prix": 155,
